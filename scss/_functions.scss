@@ -1,0 +1,3 @@
+@function shift-color($color, $weight) {
+    @return if($weight > 0, shade-color($color, $weight), tint-color($color , -$weight));
+}

@@ -1,0 +1,13 @@
+@import "variables";
+
+@mixin mobile {
+    @media (max-width: $bsm) {        
+        @content;
+    }
+}
+
+@mixin non-mobile {
+    @media (max-width: $bl) {        
+        @content;
+    }
+}

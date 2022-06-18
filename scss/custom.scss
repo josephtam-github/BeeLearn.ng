@@ -1,0 +1,213 @@
+@import "../bootstrap/scss/bootstrap";
+@import "variables";
+@import "functions";
+@import "fonts";
+@import "svgs";
+
+
+/*form color settings*/
+$input-focus-border-color:              #ffc107!important;
+$input-focus-box-shadow:                0 0 0 .25rem tint-color(#ffc107, 50%)!important;
+$form-check-input-checked-border-color:   #ffc107 !important;
+$form-check-input-focus-box-shadow: 	0 0 0 .25rem tint-color(#ffc107, 50%)!important;
+$form-check-input-checked-color:          #ffc107;
+$form-check-input-checked-bg-color:       #ffc107;
+$input-btn-focus-color:	tint-color(#ffc107, 50%) !important;
+$input-btn-focus-box-shadow:    0 0 0 .25rem #ffc107 !important;
+
+/* link settings */
+$link-color: black;
+$link-hover-color: $warning;
+$link-decoration: none;
+
+.nav-link:hover {
+	background-color: white !important;
+    color: $warning !important;
+    font-size: larger !important;
+}
+
+/* light and dark hover for colors */
+@each $color, $value in $theme-colors {
+    .bg-#{$color}-light-hover:hover {
+        background-color: shift-color($value, -20%) !important;
+    }
+    .bg-#{$color}-light-hover {
+        background-color: $value !important;
+    }
+    .bg-#{$color}-dark-hover:hover {
+        background-color: shift-color($value, 20%) !important;
+    }
+    .bg-#{$color}-dark-hover {
+        background-color: $value !important;
+    }
+}
+
+/* generate time frame for animations*/
+@each $time, $value in $time-frames {
+    .animate-top-#{$time}{position:relative;animation:animatetop $value}@keyframes animatetop{from{top:-300px;opacity:0} to{top:0;opacity:1}}
+    .animate-left-#{$time}{position:relative;animation:animateleft $value}@keyframes animateleft{from{left:-300px;opacity:0} to{left:0;opacity:1}}
+    .animate-right-#{$time}{position:relative;animation:animateright $value}@keyframes animateright{from{right:-300px;opacity:0} to{right:0;opacity:1}}
+    .animate-bottom-#{$time}{position:relative;animation:animatebottom $value}@keyframes animatebottom{from{bottom:-300px;opacity:0} to{bottom:0;opacity:1}}
+    .animate-zoom-#{$time}{animation:animatezoom $value}@keyframes animatezoom{from{transform:scale(0)} to{transform:scale(1)}}
+}
+
+
+ /* form validation style */
+.form-eye {
+    position: absolute !important;
+	right: 30px;
+	z-index: +1;
+	color: black !important;
+}
+
+.right-input .form-control {
+	border-color:rgb(0, 128, 0, 0.5);
+	border-width: 0.15rem;
+	box-shadow: 0rem 0rem 0rem 0.1rem rgba(0, 128, 0, 0.5) !important;
+}
+
+.wrong-input .form-control {
+	border-color:rgb(255, 0, 0, 0.5);
+	border-width: 0.15rem;
+	box-shadow: 0rem 0rem 0rem 0.1rem rgba(255, 0, 0, 0.5) !important;
+}
+
+.wrong-input i{
+	color: red;
+}
+
+.right-input i{
+	color: green;
+}
+
+/* toggle hide and show for navbar dropdown */
+#eToggleObject1	{
+	display: none;
+}
+
+
+#eToggleObject2	{
+	display: none;
+}
+
+/* change hieght to auto when above md size */
+.h-md-100 {
+	height: auto !important;
+}
+@include media-breakpoint-up(md) {
+	.h-md-100 {
+		height: 100% !important;
+	}
+}
+
+/* change background color to white when above md size */
+.bg-md-warning {
+	background-color: $warning !important;
+}
+@include media-breakpoint-up(md) {
+	.bg-md-warning {
+		background-color: white !important;
+	}
+}
+
+/* custom haedings */
+.rh-1 {
+	font-size: 0.8rem !important;
+}
+
+@include media-breakpoint-up(sm) {
+	.rh-1 {
+		font-size: $h6-font-size !important;
+	}
+}
+
+@include media-breakpoint-up(md) {
+	.rh-1 {
+		font-size: $h5-font-size !important;
+	}
+}
+
+@include media-breakpoint-up(lg) {
+	.rh-1 {
+		font-size: $h4-font-size !important;
+	}
+}
+
+.rh-2 {
+	font-size: $h6-font-size !important;
+}
+
+@include media-breakpoint-up(sm) {
+	.rh-2 {
+		font-size: $h5-font-size !important;
+	}
+}
+
+@include media-breakpoint-up(md) {
+	.rh-2 {
+		font-size: $h4-font-size !important;
+	}
+}
+
+@include media-breakpoint-up(lg) {
+	.rh-2 {
+		font-size: $h3-font-size !important;
+	}
+}
+
+.rh-3 {
+	font-size: $h5-font-size !important;
+}
+
+@include media-breakpoint-up(sm) {
+	.rh-3 {
+		font-size: $h4-font-size !important;
+	}
+}
+
+@include media-breakpoint-up(md) {
+	.rh-3 {
+		font-size: $h3-font-size !important;
+	}
+}
+
+@include media-breakpoint-up(lg) {
+	.rh-3 {
+		font-size: $h1-font-size !important;
+	}
+}
+
+/* news image croping and darkening */
+
+.darken{
+	filter: brightness(50%);
+}
+
+.thumbnail{
+	max-width: 200px;
+	max-height: 200px;
+	border-radius: 10px;
+}
+
+.small-thumbnail{
+	max-width: 150px !important;
+	max-height: 150px !important;
+	border-radius: 10px;
+}
+
+#lg-crop{
+	width: 1000px;
+	height: 399px;
+}
+
+/*pointer cusor */
+
+.pointer {
+	cursor: pointer;
+}
+
+.not-allowed {
+	cursor: not-allowed !important;
+}
+
+@import "../bootstrap/scss/bootstrap";
