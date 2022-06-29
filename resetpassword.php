@@ -1,5 +1,5 @@
 <?php 
-require_once 'php/user-controller.php';
+require_once './php/user-controller.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,7 +13,7 @@ require_once 'php/user-controller.php';
 	<link rel="icon" href="images/icon.png">
 	<script src="https://kit.fontawesome.com/f71a44a4e4.js"crossorigin="anonymous"></script>
 	<!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">-->
-	<link rel="stylesheet" href="scss/custom.css">
+	<link rel="stylesheet" href="./scss/custom.css">
 </head>
 <body>
     <div class="container-fluid d-flex justify-content-center align-items-center my-5">
@@ -70,8 +70,8 @@ require_once 'php/user-controller.php';
         </div>
     </div>
     <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>-->
-	<script src="scripts/navbar.js"></script>
-	<script src="scripts/form.js"></script>
-	<script src="bootstrap/js/bootstrap.bundle.js"></script>
+	<script src="./scripts/navbar.js"></script>
+	<script src="./scripts/form.js"></script>
+	<script src="./bootstrap/js/bootstrap.bundle.js"></script>
 </body>
 </html>

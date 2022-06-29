@@ -35,6 +35,25 @@ require_once "password.php";
         array_push($errorbook, $userdb->error) ;
     }
 
+    
+    $pagedetail = "CREATE TABLE beelearn.pagedetail
+    (
+    pageid INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+    id INT(11) UNSIGNED NOT NULL,
+    template VARCHAR(255) NOT NULL,
+    title VARCHAR(255) NOT NULL,
+    tag VARCHAR(255) NOT NULL,
+    display_image VARCHAR(255) NOT NULL,
+    time_created DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP, 
+    PRIMARY KEY(pageid),
+    FOREIGN KEY(id) REFERENCES beelearn.userdetail(id)
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8";
+    
+    if ($userdb->query($pagedetail) === TRUE) {
+        null; 
+    } else {
+        array_push($errorbook, $userdb->error);
+    }
 
     $commentdetail = "CREATE TABLE beelearn.commentdetail
     (
@@ -46,7 +65,8 @@ require_once "password.php";
     notify TINYINT(1) NOT NULL,
     commenttime DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY(commentid),
-    FOREIGN KEY(id) REFERENCES beelearn.userdetail(id)
+    FOREIGN KEY(id) REFERENCES beelearn.userdetail(id),
+    FOREIGN KEY(pageid) REFERENCES beelearn.pagedetail(pageid)
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8";
 
     if ($userdb->query($commentdetail) === TRUE) {
@@ -90,20 +110,17 @@ require_once "password.php";
         array_push($errorbook, $userdb->error);
     }
 
-    $pagedetail = "CREATE TABLE beelearn.pagedetail
+    $tutdetail = "CREATE TABLE beelearn.tutdetail
     (
-    pageid INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
-    id INT(11) UNSIGNED NOT NULL,
-    template VARCHAR(255) NOT NULL,
-    title VARCHAR(255) NOT NULL,
+    pageid INT(11) UNSIGNED NOT NULL,
+    link VARCHAR(255) NOT NULL,
+    author VARCHAR(255) NOT NULL,
     tag VARCHAR(255) NOT NULL,
-    display_image VARCHAR(255) NOT NULL,
-    time_created DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP, 
     PRIMARY KEY(pageid),
-    FOREIGN KEY(id) REFERENCES beelearn.userdetail(id)
+    FOREIGN KEY(pageid) REFERENCES beelearn.pagedetail(pageid)
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8";
     
-    if ($userdb->query($pagedetail) === TRUE) {
+    if ($userdb->query($tutdetail) === TRUE) {
         null; 
     } else {
         array_push($errorbook, $userdb->error);

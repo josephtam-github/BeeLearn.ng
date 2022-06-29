@@ -27,7 +27,7 @@ require_once '../php/user-controller.php';
 <body onload="loadComment();">
 	<div class="shadow-sm container-fluid p-0">
 		<div class="d-block d-md-flex justify-content-between align-items-center px-md-3">
-			<a href="home.php"><img id="logo" class="py-3 d-block" src="../images/BeeLearn.svg"></a>
+			<a href="./home.php"><img id="logo" class="py-3 d-block" src="../images/BeeLearn.svg"></a>
 			<div class="d-flex bg-md-warning bg-md-none align-items-center justify-content-end">
 				<button type="button" class="btn btn-dark text-warning rounded-circle m-2" onclick="toggleSearchHide()"><i class="fas fa-search"></i></button>
 				<?php 
@@ -46,7 +46,7 @@ require_once '../php/user-controller.php';
 	</div>
 
 	<div class="text-center container-fluid justify-content-between d-flex z-index-1000"	>
-		<div class="py-2  align-items-center animate-zoom-12" id="eToggleObject2" ><form><input type="text" placeholder="search"></form></div>
+		<div class="py-2  align-items-center animate-zoom-12" id="eToggleObject2" ><form><input class="form-control border-warning" type="text" placeholder="search"></form></div>
 	</div>
 
 	<nav class="d-none d-md-flex nav nav-tabs nav-justified text-dark shadow-sm sticky-top">

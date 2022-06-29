@@ -1,5 +1,5 @@
 <?php
-require_once 'php/user-controller.php'; ?>
+require_once './php/user-controller.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,12 +12,14 @@ require_once 'php/user-controller.php'; ?>
 	<link rel="icon" href="images/icon.png">
 	<script src="https://kit.fontawesome.com/f71a44a4e4.js"crossorigin="anonymous"></script>
 	<!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">-->
-	<link rel="stylesheet" href="scss/custom.css">
+	<link rel="stylesheet" href="./scss/custom.css">
+	<!-- REMOVE THIS -->
+	<link rel="stylesheet" href="./fontawesome/css/all.css">
 </head>
 <body>
 	<div class="shadow-sm container-fluid p-0">
 		<div class="d-block d-md-flex justify-content-between align-items-center px-md-3">
-			<a href="home.php"><img id="logo" class="py-3 d-block" src="images/BeeLearn.svg"></a>
+			<a href="./home.php"><img id="logo" class="py-3 d-block" src="./images/BeeLearn.svg"></a>
 			<div class="d-flex bg-md-warning bg-md-none align-items-center justify-content-end">
 				<button type="button" class="btn btn-dark text-warning rounded-circle m-2" onclick="toggleSearchHide()"><i class="fas fa-search"></i></button>
 				<?php 
@@ -36,25 +38,25 @@ require_once 'php/user-controller.php'; ?>
 	</div>
 
 	<div class="text-center container-fluid justify-content-between d-flex z-index-1000"	>
-		<div class="py-2  align-items-center animate-zoom-12" id="eToggleObject2" ><form><input type="text" placeholder="search"></form></div>
+		<div class="py-2  align-items-center animate-zoom-12" id="eToggleObject2" ><form><input class="form-control border-warning" type="text" placeholder="search"></form></div>
 	</div>
 
 	<nav class="d-none d-md-flex nav nav-tabs nav-justified text-dark shadow-sm sticky-top">
-		<a class="nav-link text-reset fw-bold fs-6 border-bottom-0 font-roboto border-top-0 rounded-0 border-dark border-1 bg-warning" href="explore.php">EXPLORE</a>
-		<a class="nav-link text-reset fw-bold fs-6 border-bottom-0 font-roboto border-top-0 rounded-0 border-dark border-1 bg-warning" href="home.php">HOME</a>
-		<a class="nav-link text-reset fw-bold fs-6 border-bottom-0 font-roboto border-top-0 rounded-0 border-dark border-1 bg-warning" href="news.php">NEWS</a>
-	 	<a class="nav-link text-reset fw-bold fs-6 border-bottom-0 font-roboto border-top-0 rounded-0 border-dark border-1 bg-warning" href="tips.php">TIPS</a>
-		<a class="nav-link text-reset fw-bold fs-6 border-bottom-0 font-roboto border-top-0 rounded-0 border-dark border-1 bg-warning" href="download.php">DOWNLOAD</a>
-		<a class="nav-link text-reset fw-bold fs-6 border-bottom-0 font-roboto border-top-0 rounded-0 border-dark border-1 bg-warning" href="about.php">ABOUT&nbsp;US</a>
+		<a class="nav-link text-reset fw-bold fs-6 border-bottom-0 font-roboto border-top-0 rounded-0 border-dark border-1 bg-warning" href="./explore.php">EXPLORE</a>
+		<a class="nav-link text-reset fw-bold fs-6 border-bottom-0 font-roboto border-top-0 rounded-0 border-dark border-1 bg-warning" href="./home.php">HOME</a>
+		<a class="nav-link text-reset fw-bold fs-6 border-bottom-0 font-roboto border-top-0 rounded-0 border-dark border-1 bg-warning" href="./news.php">NEWS</a>
+	 	<a class="nav-link text-reset fw-bold fs-6 border-bottom-0 font-roboto border-top-0 rounded-0 border-dark border-1 bg-warning" href="./tips.php">TIPS</a>
+		<a class="nav-link text-reset fw-bold fs-6 border-bottom-0 font-roboto border-top-0 rounded-0 border-dark border-1 bg-warning" href="./download.php">DOWNLOAD</a>
+		<a class="nav-link text-reset fw-bold fs-6 border-bottom-0 font-roboto border-top-0 rounded-0 border-dark border-1 bg-warning" href="./about.php">ABOUT&nbsp;US</a>
 	</nav>
 
 	<div id="eToggleObject1" class="shadow-sm d-md-none container-fuid">
-		<a class="text-center text-decoration-none text-reset fw-bold border-bottom border-2 font-roboto border-dark py-2 nav-link p-1 bg-warning animate-left-2  border-top" href="explore.php">EXPLORE</a>
-		<a class="text-center text-decoration-none text-reset fw-bold border-bottom border-2 font-roboto border-dark py-2 nav-link p-1 bg-warning animate-left-4" href="home.php">HOME</a>
-		<a class="text-center text-decoration-none text-reset fw-bold border-bottom border-2 font-roboto border-dark py-2 nav-link p-1 bg-warning animate-left-6" href="news.php">NEWS</a>
-		<a class="text-center text-decoration-none text-reset fw-bold border-bottom border-2 font-roboto border-dark py-2 nav-link p-1 bg-warning animate-left-8" href="tips.php">TIPS</a>
-		<a class="text-center text-decoration-none text-reset fw-bold border-bottom border-2 font-roboto border-dark py-2 nav-link p-1 bg-warning animate-left-10" href="download.php">DOWNLOAD</a>
-		<a class="text-center text-decoration-none text-reset fw-bold border-bottom border-2 font-roboto border-dark py-2 nav-link p-1 bg-warning animate-left-12" href="about.php">ABOUT&nbsp;US</a>
+		<a class="text-center text-decoration-none text-reset fw-bold border-bottom border-2 font-roboto border-dark py-2 nav-link p-1 bg-warning animate-left-2  border-top" href="./explore.php">EXPLORE</a>
+		<a class="text-center text-decoration-none text-reset fw-bold border-bottom border-2 font-roboto border-dark py-2 nav-link p-1 bg-warning animate-left-4" href="./home.php">HOME</a>
+		<a class="text-center text-decoration-none text-reset fw-bold border-bottom border-2 font-roboto border-dark py-2 nav-link p-1 bg-warning animate-left-6" href="./news.php">NEWS</a>
+		<a class="text-center text-decoration-none text-reset fw-bold border-bottom border-2 font-roboto border-dark py-2 nav-link p-1 bg-warning animate-left-8" href="./tips.php">TIPS</a>
+		<a class="text-center text-decoration-none text-reset fw-bold border-bottom border-2 font-roboto border-dark py-2 nav-link p-1 bg-warning animate-left-10" href="./download.php">DOWNLOAD</a>
+		<a class="text-center text-decoration-none text-reset fw-bold border-bottom border-2 font-roboto border-dark py-2 nav-link p-1 bg-warning animate-left-12" href="./about.php">ABOUT&nbsp;US</a>
 		<?php 
 			if (isset($_SESSION['id'])) {
 				echo "<a class='text-center text-decoration-none text-reset fw-bold border-bottom border-2 font-roboto border-dark py-2 nav-link p-1 bg-warning animate-left-14' href='./settings.php'>SETTINGS</a>";
@@ -75,6 +77,7 @@ require_once 'php/user-controller.php'; ?>
 	</div>
 
 	<div class="floatingshapes-bg">
+		<!--
 		<div class="row	mx-0">
 			<div class="col-lg-8">
 			<a href="./campus.php" class="text-decoration-none">
@@ -93,6 +96,7 @@ require_once 'php/user-controller.php'; ?>
 				</div>
 			</div>
 		</div>
+		-->
 		<div class="row	mx-0">
 			<div class="col-lg-8">
 				<a href="./forum.php" class="text-decoration-none">
@@ -113,13 +117,15 @@ require_once 'php/user-controller.php'; ?>
 		</div>
 		<div class="row	mx-0">
 			<div class="col-lg-8">
-				<div class="m-5">
-					<h4 class="text-dark text-center bg-warning-light-hover p-0 my-0">TUTORIALS</h4>
-					<div class="card p-3 font-montserrat" >
-						<img src="./images/WBD.jpg" alt="world book day" id="lg-crop" class="card-body card-img d-block  w-100 h-md-100">
-						<p class="card-title ">The West African Examination Council (WAEC) has released its 2020/2021 examination result</p>
+				<a href="./tutorials.php" class="text-decoration-none">
+					<div class="m-5">
+						<h4 class="text-dark text-center bg-warning-light-hover p-0 my-0">TUTORIALS</h4>
+						<div class="card p-3 font-montserrat" >
+							<img src="./images/WBD.jpg" alt="world book day" id="lg-crop" class="card-body card-img d-block  w-100 h-md-100">
+							<p class="card-title ">The West African Examination Council (WAEC) has released its 2020/2021 examination result</p>
+						</div>
 					</div>
-				</div>
+				</a>
 			</div>
 			<div class="col-lg-4">
 				<div class="bg-light m-5">
@@ -191,8 +197,8 @@ require_once 'php/user-controller.php'; ?>
 		</div>
 	</div>
 		<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>-->
-		<script src="scripts/navbar.js"></script>
-		<script src="bootstrap/js/bootstrap.bundle.js"></script>
+		<script src="./scripts/navbar.js"></script>
+		<script src="./bootstrap/js/bootstrap.bundle.js"></script>
 </body>
 </html>
 
